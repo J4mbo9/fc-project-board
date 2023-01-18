@@ -1,5 +1,6 @@
 package fc.projectboard.repository;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Disabled("spring Data REST 통합테스는 불필요 제외")
 @DisplayName("Data REST - API테스트")
 @AutoConfigureMockMvc
 @SpringBootTest
