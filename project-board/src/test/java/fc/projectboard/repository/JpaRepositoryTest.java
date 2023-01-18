@@ -37,7 +37,7 @@ class JpaRepositoryTest {
         //then
         Assertions.assertThat(articles)
                 .isNotNull()
-                .hasSize(0);
+                .hasSize(100);
     }
     @DisplayName("insert 테스트")
     @Test
@@ -57,7 +57,6 @@ class JpaRepositoryTest {
     void givenTestData_whenUpdating_thenWorksFine(){
 
         //given
-        articleRepository.save(Article.of("new article", "new content", "#spring"));
 
         Article article = articleRepository.findById(1L).orElseThrow();
         String updatedHashtag = "#springboot";
@@ -74,7 +73,6 @@ class JpaRepositoryTest {
     void givenTestData_whenDeleting_thenWorksFine(){
 
         //given
-        articleRepository.save(Article.of("new article", "new content", "#spring"));
         Article article = articleRepository.findById(1L).orElseThrow();
         long count = articleRepository.count();
 

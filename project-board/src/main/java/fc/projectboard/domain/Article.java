@@ -42,7 +42,7 @@ public class Article extends AuditingField{
     @OneToMany(mappedBy = "article",cascade = CascadeType.ALL)// 기본이름을 두엔티티 이름을 합치기때문에 방지하려고 넣어줌.
     @ToString.Exclude// 양방향 순환참조 방지
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
-    
+
     protected Article() {
     }
     private Article(String title, String content, String hashtag) {
