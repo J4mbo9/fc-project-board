@@ -3,7 +3,6 @@ management.endpoints.web.exposure.include: "*" #액추에이터 엔드포인트 
 
 logging:
   level:
-    com.fc-project-board.project-board: debug
     org.springframwork.web.servlet: debug # debug: request, response만 뽑아 봄
     org.hibernate.type.descriptor.sql.BasicBinder: trace #jpa
 
@@ -13,7 +12,6 @@ spring:
     username: bonoo
     password: test
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
     defer-datasource-initialization: true #더미데이터 쿼리
     hibernate.ddl-auto: create #테스트 실행시 자동으로 ddl 작성해줌
@@ -21,7 +19,7 @@ spring:
     properties:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
-  h2.console.enabled: false
+#  h2.console.enabled: true #h2 console 사용여부?
   sql.init.mode: always
 
   data.rest:
