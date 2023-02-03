@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface ArticleCommentsRepository extends JpaRepository<ArticleComment,Long> {
+public interface ArticleCommentRepository extends
+        JpaRepository<ArticleComment, Long> { //검색기능
 }
