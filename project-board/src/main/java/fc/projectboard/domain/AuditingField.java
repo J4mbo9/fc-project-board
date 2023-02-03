@@ -26,7 +26,7 @@ public class AuditingField{
     private LocalDateTime createdAt; // 생성일시
 
     @CreatedBy
-    @Column(nullable = false,length = 100,updatable = false)
+    @Column(nullable = false, length = 100, updatable = false)
     private String createdBy; // 생성자
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
