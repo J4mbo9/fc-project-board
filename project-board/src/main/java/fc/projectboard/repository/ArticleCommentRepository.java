@@ -2,9 +2,7 @@ package fc.projectboard.repository;
 
 import com.querydsl.core.types.dsl.DateTimeExpression;
 import com.querydsl.core.types.dsl.StringExpression;
-import fc.projectboard.domain.Article;
 import fc.projectboard.domain.ArticleComment;
-import fc.projectboard.domain.QArticle;
 import fc.projectboard.domain.QArticleComment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
