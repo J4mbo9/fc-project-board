@@ -6,6 +6,8 @@ import com.querydsl.core.types.dsl.StringExpression;
 import fc.projectboard.domain.Article;
 import fc.projectboard.domain.QArticle;
 import fc.projectboard.domain.QArticleComment;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
@@ -18,6 +20,7 @@ public interface ArticleRepository extends
         QuerydslPredicateExecutor<Article>,
         QuerydslBinderCustomizer<QArticle> {//기본 검색기능 추가해줌{
 
+    Page<Article> findByTitle(String title, Pageable pageable);
 
     @Override
     default void customize(QuerydslBindings bindings, QArticle root) {
