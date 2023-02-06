@@ -22,7 +22,8 @@ spring:
     properties:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
-#  h2.console.enabled: true #h2 console 사용여부?
+    open-in-view: false
+  #  h2.console.enabled: true #h2 console 사용여부?
   sql.init.mode: always
   data.rest:
     base-path: /api
